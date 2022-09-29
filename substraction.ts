@@ -1,4 +1,4 @@
-console.log("substraction...".toLocaleUpperCase());
+console.log("<<<<<<<< substraction start >>>>>>>>>".toLocaleUpperCase());
 // Substraction: Tính trừu tượng:
 /**
  * Tính trừu tượng thể hiện qua việc tạo ra một đối tượng ban đầu
@@ -11,15 +11,19 @@ console.log("substraction...".toLocaleUpperCase());
 // Sử dụng từ khoá 'abstract class'
 // Phương thức muốn là trừu tượng sử dụng từ khoá "abstract" trước tên hàm
 
+// Phân biệt 2 thằng này. tính đa kế thừa
+
 abstract class Phone {
   name: string;
   color: string;
   weight: number;
+
   constructor(name: string, color: string, weight: number) {
     this.name = name;
     this.color = color;
     this.weight = weight;
   }
+
   // Hàm triển khai ở lớp dẫn xuất (lớp con)
   abstract takePhoto(): void;
 }
@@ -35,6 +39,9 @@ class Iphone extends Phone {
   sendMail(): void {
     console.log(`${this.name} can send email`);
   }
+  callFacetime(): void {
+    console.log("Iphone have Facetime call feature!");
+  }
 }
 
 // Lớp trừu tượng hoặc dẫn xuất có thể dùng để tạo tham chiếu kiểu dữ liệu
@@ -46,6 +53,7 @@ iphone12 = new Iphone("iPhone 12", "black", 300);
 console.log(iphone12);
 iphone12.takePhoto();
 iphone12.sendMail();
+iphone12.callFacetime();
 
 // 2. Trừu tượng với Interface
 // Tương tự như abstract class, các phương thức được khai báo trong
@@ -59,29 +67,28 @@ interface Car {
 
 interface Utility {
   playMusic(): void; // Triển khai code xử lý ở lớp thực thi interface
+  // run(): void
 }
 
 class Mercedes implements Car, Utility {
-    name: string
-    constructor(name: string) {
-        this.name = name
-    }
-    run(): void {
-        console.log(`${this.name} run faster than Honda CRV`)
-    }
-    playMusic(): void {
-        console.log(`${this.name} can play a music recoder`)
-    }
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  run(): void {
+    console.log(`${this.name} run faster than Honda CRV`);
+  }
+  playMusic(): void {
+    console.log(`${this.name} can play a music recoder`);
+  }
 }
 
 // Có thể tham chiếu kiểu dữ liệu là interface
 // Không thể tạo một instance từ interface
 let maybach: Mercedes;
-maybach = new Mercedes('maybachS450')
-console.log(maybach)
+maybach = new Mercedes("maybachS450");
+console.log(maybach);
 
-maybach.playMusic();
+maybach.run();
 
-
-
-
+console.log("<<<<<<< SUBSTRACTION END >>>>>>>>>>>>");
