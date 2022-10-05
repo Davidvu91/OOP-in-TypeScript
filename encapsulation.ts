@@ -49,7 +49,7 @@ class Student extends Person {
 }
 
 const Lan = new Student("Lan", 21, 50, 168);
-Lan.age = 90;
+Lan.age
 // console.log('My name is:', Lan);
 
 // Computer Object:

@@ -1,0 +1,141 @@
+3. entries():
+- Trả về object chứa các array đặc biệt 
+  là các cặp key/value đại diện cho vị trí và giá trị 
+  của array ban đầu tại vị trí đó
+
+- Không làm thay đổi array ban đầu
+
+4. every(callBack):
+- Nhận đối số là một callBack 
+  thực thi cho mỗi phần tử của array
+- Return về boolean
+- Không làm thay đổi array ban đầu
+- Trả về true nếu callBack check từng phần tử trả về true
+
+5. fill(value, start, end):
+- Ghi đè value lên các phần tử trong array từ start tới end
+- Thay đổi array ban đầu.
+
+6. filter(callBack):
+- Trả về mảng mới chứa các phần tử 
+  thoả mãn điều kiện lọc từ callBack
+- Không làm thay đổi mảng ban đầu
+
+7. find(callBack)
+- Trả về giá trị đầu tiên của mảng 
+  thoả mãn điều kiện đưa ra bởi callBack
+- Không làm thay đổi array ban đầu.
+- Trả về undified nếu không có tìm thấy phần tử thoả mãn.
+
+8. findIndex(callBack)
+- Trả về vị trí chỉ mục của phần tử đầu tiên được tìm thấy 
+  thoả mã điều kiện đưa ra bởi callBack
+- Không làm thay đổi array ban đầu
+- Trả về -1 nếu không tìm được chỉ mục thoả mãn
+
+9. findLast(callBack):
+- Trả về giá trị phàn tử đầu tiên thoả mãn điều kiện lọc 
+  từ callBack theo thứ tự từ cuối về.
+- Không làm thay đổi mảng ban đầu
+- Trả về undified nếu không có phần tử thoả mãn.
+
+10. findLastIndex(callBack):
+- Trả về vị trí chỉ mục của phần tử đầu tiên của mảng thoả mãn
+  điều kiện tìm kiếm của callBack theo thứ tự từ cuối về
+- Không làm thay đổi array ban đầu
+- Trả về -1 nếu không tìm thấy chỉ mục của phần tử thoả mãn.
+
+11. flat(deep): Xem thêm các ví dụ hữu ích trên MDN
+- Làm phẳng mảng
+- Trả về mảng được làm phẳng theo tham số deep level truyền vào
+- deep mặc định không truyền sẽ là 1
+
+12. flatMap(callBack) = .map().flat()
+- Trả về mảng mới với các phần tử được tạo ra từ callBack 
+  và được làm phẳng với deep = 1.
+
+13. forEach(callBack):
+- Luôn trả về undified
+- Thực thi callBack một lần cho mỗi phần tử trong array ban đầu.
+ 
+14. Array.from(object):
+- Trả về một mảng từ một object có thuộc tính length
+
+15. includes(element, start): 
+- Trả về boolean
+- Có phân biệt chữ viết hoa và viết thường
+
+21. map(callBack):
+- Trả về mảng mới chứa các phần tử được return từ callBack 
+  được gọi cho mỗi phần tử
+- Không làm thay đổi mảng ban đầu
+
+22. pop()
+- Không nhận đối số
+- Xoá bỏ phần tử cuối mảng
+- Làm thay đổi mảng ban đầu
+- Trả về phần tử vừa xoá
+
+23. push()
+- Thêm một hoặc nhiều phần tử mới vào cuối mảng
+- Làm thay đổi mảng ban đầu
+- Trả về độ dài mới của mảng
+
+24. reduce(callBack)
+- Trả về giá trị duy nhất 
+  sau khi callBack được gọi cho từng phần tử trong mảng
+- Lấy giá trị được tích luỹ trước đó làm đối số cho 
+  callBack ở phần tử kế tiếp
+- Nếu không có giá trị default thì lấy phần tử 
+  đầu tiên trong mảng làm mặc định
+
+25. reduceRight(callBack):
+- Giống như reduce nhưng thực thi callBack lần lượt 
+  theo thú tự từ phải qua trái.
+
+26. reverse():
+- Không nhận đối số
+- Thay đổi mảng ban đầu
+- Đảo ngược thứ tự của các phần tử trong mảng
+
+27. shift()
+- Không nhận đối số
+- Thay đổi mảng ban đầu
+- Xoá đi phần tử đầu tiên trong mảng
+- Trả về phần tử được xoá
+
+28. slice(start, end):
+- Băm mảng từ start tới end
+- Trả về mảng mới chứa các phần từ từ start tới end-1
+- Không làm thay đổi mảng ban đầu
+- Số âm là tính từ phần tử cuối
+
+29. some(callBack)
+- Kiểm tra xem có ít nhất một phần tử thoả mãn điều kiện bằng callBack
+- Trả về true nếu có ít nhất một phần tử thoả mãn, nếu ko trả về false
+- Không làm thay đổi mảng ban đầu
+
+30. sort(compareFunction):
+- Sắp xếp lại mảng 
+
+31. splice(start, deletedCount, item1,...)
+- Loại bỏ, thay thế hoặc thêm mới một hay nhiều phần tử trong mảng
+- Làm thay đổi mảng ban đầu
+- Trả về mảng chứa những phần tử đã bị xoá
+
+32. toString():
+- Trả về một chuỗi là các phần tử của mảng được ngăn cách bởi dấu ,
+- Không làm thay đổi mảng ban đầu
+- Không nhận đối số
+
+33. unshift(item1, item2...):
+- Thêm một hoặc nhiều phần tử vào mảng hiện tại vào đầu mảng
+- Trả về mảng mới overwrites mảng cũ với các phần tử mới đc thêm
+
+34. valueOf():
+- Trả về chính mạng hiện tại
+- Không thay đổi mảng ban đầu
+
+===========================================================================
+
+

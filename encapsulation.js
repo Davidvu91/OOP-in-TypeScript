@@ -16,7 +16,7 @@ class Student extends Person {
     }
 }
 const Lan = new Student("Lan", 21, 50, 168);
-Lan.age = 90;
+Lan.age;
 class computer {
     constructor(color, model) {
         this.color = color;
